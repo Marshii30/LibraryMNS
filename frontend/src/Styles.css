@@ -1,0 +1,157 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* General Body Styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: black;
+  color: white;
+}
+
+/* Home & Books Container */
+.home-container, .books-container {
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+/* Fancy Glowing Heading */
+.home-container h1,
+.books-container h2 {
+  font-size: 32px;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff;
+  margin-bottom: 20px;
+}
+
+/* Login Box */
+.login-box {
+  margin: 20px auto;
+  padding: 20px;
+  background: #222;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff;
+}
+
+/* Input Fields & Buttons */
+input, button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background: cyan;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #00ffffcc;
+  transform: scale(1.03);
+}
+
+/* Sample Books Section (Home Page) */
+.sample-books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Books Grid (Books Page) */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Book Card (Shared Styling) */
+.book,
+.book-card {
+  background: #111;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.book:hover,
+.book-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+}
+
+/* Book Image Styling */
+.book img,
+.book-image {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Book Text */
+.book p,
+.book-card p,
+.book h3,
+.book-card h3 {
+  color: #0ff;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  font-size: 22px;
+}
+
+/* Hover Shine Effect (Optional) */
+.book img:hover,
+.book-image:hover {
+  filter: brightness(1.2) saturate(1.2);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .login-box {
+    width: 90%;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+  }
+
+  .book img,
+  .book-image {
+    max-height: 140px;
+  }
+
+  .home-container h1,
+  .books-container h2 {
+    font-size: 24px;
+  }
+}
